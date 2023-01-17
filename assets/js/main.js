@@ -26,7 +26,6 @@ let x;
 sliderContainer.addEventListener("touchstart", (e) => {
     pressed = true;
     startX = e.touches[0].clientX - innerSlider.offsetLeft;
-    sliderContainer.style.cursor = "grabbing";
 });
 
 sliderContainer.addEventListener("touchmove", (e) => {
@@ -36,9 +35,46 @@ sliderContainer.addEventListener("touchmove", (e) => {
     x = e.touches[0].clientX;
 
     innerSlider.style.left = `${x - startX}px`;
+
+    checkBoundary();
 });
 
 sliderContainer.addEventListener("touchend", () => {
-    sliderContainer.style.cursor = "grab";
     pressed = false;
 });
+
+const checkBoundary = () => {
+    let outer = sliderContainer.getBoundingClientRect();
+    let inner = innerSlider.getBoundingClientRect();
+
+    if (parseInt(innerSlider.style.left) > 0) {
+        innerSlider.style.left = "0px";
+    }
+
+    if (inner.right < outer.right) {
+        innerSlider.style.left = `-${inner.width - outer.width}px`;
+    }
+
+
+    
+    let coffeeBig = document.querySelectorAll('.coffeeBig');
+    coffeeBig.forEach(item => {
+        if(item.getBoundingClientRect().left < outer.left ){
+            item.classList.add('edge');
+        }else{
+            item.classList.remove('edge');
+        }
+    });
+
+    let coffeeSmall = document.querySelectorAll('.coffeeSmall');
+    coffeeSmall.forEach(item => {
+        if(item.getBoundingClientRect().right > outer.right ){
+            item.classList.add('edge');
+        }else{
+            item.classList.remove('edge');
+        }
+    });
+
+
+
+};

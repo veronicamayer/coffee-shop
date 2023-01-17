@@ -80,16 +80,15 @@ nav a:first-of-type {
 
 .slider-container {
   position: absolute;
-  top: calc(20vh + 50%);
-  left: calc(20px + 50%);
+  top: calc(13vh + 50%);
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(100vw - 20px);
+  width: 100vw;
   height: 85vh;
   overflow: hidden;
 }
 
 .inner-slider {
-  width: 150%;
   display: flex;
   align-items: center;
   position: absolute;
@@ -103,6 +102,7 @@ nav a:first-of-type {
   border-radius: 20px;
   background-color: #fafafa;
   position: relative;
+  margin-left: 20px;
 }
 #coffeeBig a img, footer #otherProducts article a img, #coffeeSmall a img {
   position: absolute;
@@ -110,13 +110,33 @@ nav a:first-of-type {
   right: 20px;
 }
 
+.cofeeBig {
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.coffeeBig.edge {
+  transform: scale(0.8);
+}
+
 #coffeeSmall {
-  margin: 0 20px;
+  margin: 0 20px 0 0;
+}
+
+.cofeeSmall {
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.coffeeSmall.edge {
+  transform: scale(0.8);
 }
 
 footer {
   padding: 0 20px;
   overflow: hidden;
+  position: relative;
+  top: 55vh;
 }
 footer h3 {
   margin: 0 0 20px 0;
