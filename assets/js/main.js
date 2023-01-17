@@ -16,6 +16,13 @@ for(var i = 0; i < buttons.length; i++) {
 }
 
 /* Carousel */
+let sliderContainer = document.querySelector('.slider-container');
+let innerSlider = document.querySelector('.inner-slider');
+
+let pressed = false;
+let startX;
+let x;
+
 sliderContainer.addEventListener("touchstart", (e) => {
     pressed = true;
     startX = e.touches[0].clientX - innerSlider.offsetLeft;
