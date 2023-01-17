@@ -4,59 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/scss/main.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Title</title>
 </head>
 <body>
     <header>
-        <a href="#"><img src="./assets/img/icon.png" alt="back icon"></a>
-        <a href="#"><img src="./assets/img/Burger Menu.png" alt="burger menu"></a>
+        <section id="icons">
+            <a href=""><img src="./assets/img/icon.png" alt="back icon"></a>
+            <a class="toggleNav"><img src="./assets/img/Burger Menu.png" alt="burger menu icon"></a>      
+        </section>
+        <nav id="nav">
+            <a href="#" class="toggleNav"><img src="./assets/img/icon.png" alt="back icon"></a>
+            <a href="#" class="toggleNav">Home</a>
+            <a href="#" class="toggleNav">About</a>
+            <a href="#" class="toggleNav">Contact</a>
+        </nav>  
         <h1>Botanical Coffee</h1>
         <h2>Best coffee for you & your Family.</h2>
     </header>
 
-    <main>
-        <section>
-            <img src="./assets/img/KaffeeVersetzt.png" alt="coffee package">
-            <article>
-                <h3>Botanical Coffe-Pack</h3>
-                <h4>The Botanical Coffee Co Brand.</h4>
-                <p>Price: 140$</p>
-                <a href=""><img src="./assets/img/ShoppingCart.png" alt="shopping cart icon"></a>
-            </article>
-        </section>
+    <main class="slider-container">
+        <div class="inner-slider">
+            <section id="coffeeBig">
+                <img src="./assets/img/KaffeeVersetzt.png" alt="coffee package">
+                <article>
+                    <h3>Botanical Coffe-Pack</h3>
+                    <h4>The Botanical Coffee Co Brand.</h4>
+                    <p>Price: 140$</p>
+                    <a href=""><img src="./assets/img/ShoppingCart.png" alt="shopping cart icon"></a>
+                </article>
+            </section>
 
-        <section>
-            <img src="./assets/img/KaffeeGeradeGroß (1).png" alt="coffee package">
-            <article>
-                <h3>Botanical Coffe-Pack</h3>
-                <h4>The Botanical Coffee Co Brand.</h4>
-                <p>Price: 140$</p>
-                <a href=""><img src="./assets/img/ShoppingCart.png" alt="shopping cart icon"></a>
-            </article>
-        </section>
+            <section id="coffeeSmall">
+                <img src="./assets/img/KaffeeGeradeGroß (1).png" alt="coffee package">
+                <article>
+                    <h3>Botanical Coffe-Pack</h3>
+                    <h4>The Botanical Coffee Co Brand.</h4>
+                    <p>Price: 140$</p>
+                    <a href=""><img src="./assets/img/ShoppingCart.png" alt="shopping cart icon"></a>
+                </article>
+            </section>
+        </div>
     </main>
 
-    <footer>
+<!--     <footer>
         <h3>Other Products</h3>
-        <section>
-            <img src="./assets/img/product_5 2.png" alt="">
-            <h5>The Botanical Cold Coffee.</h5>
-            <p>$90</p>
-        </section>
+        <section id="otherProducts">
+            <article>
+                <img src="./assets/img/product_5 2.png" alt="">
+                <h5>The Botanical Cold Coffee.</h5>
+                <p>$90</p>
+            </article>
 
-        <section>
-            <img src="./assets/img/product_4 2.png" alt="">
-            <h5>The Botanical Cold Coffee.</h5>
-            <p>$60</p>
-        </section>
+            <article>
+                <img src="./assets/img/product_4 2.png" alt="">
+                <h5>The Botanical Cold Coffee.</h5>
+                <p>$60</p>
+            </article>
 
-        <section>
-            <img src="./assets/img/product_2 2 (1).png" alt="">
-            <h5>The Botanical Cold Coffee.</h5>
-            <p>$60</p>
+            <article>
+                <img src="./assets/img/product_2 2 (1).png" alt="">
+                <h5>The Botanical Cold Coffee.</h5>
+                <p>$60</p>
+            </article>
         </section>
     </footer>
+-->    
 
     <script src="./assets/js/main.js"></script>
 </body>

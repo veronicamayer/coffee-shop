@@ -1,0 +1,155 @@
+@use "variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: variables.$fontFamily;
+}
+
+html {
+    max-width: 430px;
+    max-height: 932px;
+}
+
+#icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: variables.$standardMargin;
+}
+
+h1, h2 {
+    margin: 0 variables.$standardMargin;
+}
+
+h1 {
+    font-size: 36px;
+    font-variation-settings: "wght" 600;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    font-variation-settings: "wght" 600;
+    margin: variables.$standardMargin 0 0 variables.$standardMargin;
+}
+
+h4 {
+    font-size: 10px;
+    margin: 0 0 variables.$standardMargin variables.$standardMargin;
+}
+
+p {
+    color: variables.$accentColor;
+    margin: variables.$standardMargin 0 variables.$standardMargin variables.$standardMargin;
+}
+
+nav {
+    width: 100%;
+    height: 100vh;
+    background-color: variables.$accentColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20vh;
+    display: none;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 4rem;
+        line-height: 8rem;
+    }
+}
+
+nav a:first-of-type  {
+    position: absolute;
+    top: 19px;
+    left: 20px;
+    line-height: 1rem;
+}
+
+
+.slider-container {
+    position: absolute;
+    top: calc(20vh + 50%);
+    left: calc(20px + 50%);
+    transform: translate(-50%, -50%);
+    width: calc(100vw - 20px);
+    height: 85vh;
+    overflow: hidden;
+}
+
+.inner-slider {
+    width: 150%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+
+} 
+
+#coffeeBig {
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    border-radius: 20px;
+    background-color: #fafafa;
+    position: relative;
+
+    a img {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+#coffeeSmall {
+    @extend #coffeeBig;
+    margin: 0 variables.$standardMargin;
+}
+
+footer {
+    padding: 0 variables.$standardMargin;
+    overflow: hidden;
+
+    h3 {
+        margin: 0 0 variables.$standardMargin 0;
+    }
+
+    #otherProducts {
+        display: flex;
+        margin-left: 60px;
+        gap: variables.$standardMargin;
+        padding-bottom: variables.$standardMargin;
+
+
+        article {
+            @extend #coffeeBig;
+
+            h5 {
+                font-size: 10.5px;
+                font-variation-settings: "wght" 600;
+                margin: 10px 20px 20px 10px;
+            }
+
+            p {
+                position: absolute;
+                bottom: 10px;
+                right: 15px;  
+                margin: 0;      
+            }
+        }
+
+    }
+}
+
+
