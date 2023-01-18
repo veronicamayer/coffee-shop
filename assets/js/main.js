@@ -55,8 +55,6 @@ const checkBoundary = () => {
         innerSlider.style.left = `-${inner.width - outer.width}px`;
     }
 
-
-    
     let coffeeBig = document.querySelectorAll('.coffeeBig');
     coffeeBig.forEach(item => {
         if(item.getBoundingClientRect().left < outer.left ){
@@ -74,7 +72,4 @@ const checkBoundary = () => {
             item.classList.remove('edge');
         }
     });
-
-
-
 };
