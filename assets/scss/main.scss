@@ -79,11 +79,11 @@ nav {
 
 .slider-container {
     position: absolute;
-    top: calc(13vh + 50%);
+    top: calc(120px + 50%);
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
-    height: 85vh;
+    height: 800px;
     overflow: hidden;
 }
 
@@ -137,7 +137,7 @@ footer {
     padding: 0 variables.$standardMargin;
     overflow: hidden;
     position: relative;
-    top: 55vh;
+    top: 510px;
 
     h3 {
         margin: 0 0 variables.$standardMargin 0;
