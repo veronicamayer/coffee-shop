@@ -115,7 +115,7 @@ nav a:first-of-type {
 }
 
 .coffeeBig.edge {
-  transform: scale(0.8);
+  transform: scale(0.8) translate(-20px, 0px);
 }
 
 #coffeeSmall {
@@ -128,7 +128,7 @@ nav a:first-of-type {
 }
 
 .coffeeSmall.edge {
-  transform: scale(0.8);
+  transform: scale(0.8) translate(-20px, 0px);
 }
 
 footer {
